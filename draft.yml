@@ -1,0 +1,55 @@
+models:
+  Models\UserApp:
+    first_name: string
+    last_name: string
+    email: string unique
+    password: string
+    type: enum:INTERVIEWER,DOCTOR
+    relationships:
+      belongsToMany: Project
+      hasMany: ProjectStatus
+
+  Models\Project:
+    name: string
+    code: string unique
+    deadline: date
+    project_leader_id: id foreign:user_apps
+    relationships:
+      belongsToMany: UserApp
+      hasMany: Questionnaire
+
+  Models\ProjectStatus:
+    doctor_id: id foreign:doctors
+    project_id: id foreign:projects
+    status: enum:DONE,IN-PROGRESS,REJECTED
+    relationships:
+      belongsTo: UserApp
+
+  Models\Doctor:
+    user_id: id foreign:user_apps
+    address1: string
+    address2: string nullable
+    phone: string
+    relationships:
+      hasMany: PublicPractice, PrivatePractice
+
+  Models\PublicPractice:
+    name: string
+    relationships:
+      belongsToMany: Doctor
+
+  Models\PrivatePractice:
+    name: string
+    address1: string
+    address2: string nullable
+    state: string
+    zip: string
+    relationships:
+      belongsToMany: Doctor
+
+  Models\Questionnaire:
+    questions: json
+    payment_status: binary default:0
+    status: enum:DONE,IN-PROGRESS,REJECTED
+    relationships:
+      belongsToMany: Project
