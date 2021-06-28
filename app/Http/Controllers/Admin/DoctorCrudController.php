@@ -75,17 +75,17 @@ class DoctorCrudController extends CrudController
         CRUD::setValidation(DoctorRequest::class);
 
         $users = UserApp::where('type', '=', 'DOCTOR')->get();
-        $values = [];
+        $user_entries = [];
 
         foreach($users as $user) {
-            $values[$user->id] = $user->email;
+            $user_entries[$user->id] = $user->email;
         }
 
         CRUD::addField([
             'name'        => 'user_id',
-            'label'       => "Usuario",
+            'label'       => 'Usuario',
             'type'        => 'select2_from_array',
-            'options'     => $values,
+            'options'     => $user_entries,
             'allows_null' => false,
             'default'     => 'one',
             // 'allows_multiple' => true, // OPTIONAL; needs you to cast this to array in your model;
@@ -95,24 +95,30 @@ class DoctorCrudController extends CrudController
         CRUD::field('address2');
         CRUD::field('phone');
 
-        CRUD::addField([
-            'label'     => 'Practica Publica',
+        CRUD::addField([    // Select2Multiple = n-n relationship (with pivot table)
+            'label'     => "Practica Publica",
             'type'      => 'select2_multiple',
             'name'      => 'publicPractices', // the method that defines the relationship in your Model
+       
+            // optional
             'entity'    => 'publicPractices', // the method that defines the relationship in your Model
-            'attribute' => 'name', // foreign key attribute that is shown to user
             'model'     => "App\Models\PublicPractice", // foreign key model
-            'pivot'     => false, // on create&update, do you need to add/delete pivot table entries?
+            'attribute' => 'name', // foreign key attribute that is shown to user
+            'pivot'     => true, // on create&update, do you need to add/delete pivot table entries?
+            // 'select_all' => true, // show Select All and Clear buttons?
         ]);
 
-        CRUD::addField([
-            'label'     => 'Practica Privada',
+        CRUD::addField([    // Select2Multiple = n-n relationship (with pivot table)
+            'label'     => "Practica Privada",
             'type'      => 'select2_multiple',
             'name'      => 'privatePractices', // the method that defines the relationship in your Model
+       
+            // optional
             'entity'    => 'privatePractices', // the method that defines the relationship in your Model
-            'attribute' => 'name', // foreign key attribute that is shown to user
             'model'     => "App\Models\PrivatePractice", // foreign key model
-            'pivot'     => false, // on create&update, do you need to add/delete pivot table entries?
+            'attribute' => 'name', // foreign key attribute that is shown to user
+            'pivot'     => true, // on create&update, do you need to add/delete pivot table entries?
+            // 'select_all' => true, // show Select All and Clear buttons?
         ]);
 
         /**

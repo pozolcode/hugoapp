@@ -31,7 +31,7 @@ models:
     address2: string nullable
     phone: string
     relationships:
-      hasMany: PublicPractice, PrivatePractice
+      belongsToMany: PublicPractice, PrivatePractice
 
   Models\PublicPractice:
     name: string

@@ -18,7 +18,7 @@ class CreateQuestionnairesTable extends Migration
         Schema::create('questionnaires', function (Blueprint $table) {
             $table->id();
             $table->json('questions');
-            $table->binary('payment_status')->default('0');
+            $table->binary('payment_status');
             $table->enum('status', ["DONE","IN-PROGRESS","REJECTED"]);
             $table->timestamps();
         });

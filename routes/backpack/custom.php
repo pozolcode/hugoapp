@@ -21,4 +21,8 @@ Route::group([
     Route::crud('publicpractice', 'PublicPracticeCrudController');
     Route::crud('projectstatus', 'ProjectStatusCrudController');
     Route::crud('questionnaire', 'QuestionnaireCrudController');
+    Route::crud('private-practice', 'PrivatePracticeCrudController');
+    Route::crud('project-status', 'ProjectStatusCrudController');
+    Route::crud('public-practice', 'PublicPracticeCrudController');
+    Route::crud('user-app', 'UserAppCrudController');
 }); // this should be the absolute last line of this file

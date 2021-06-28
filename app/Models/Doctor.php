@@ -35,12 +35,12 @@ class Doctor extends Model
 
     public function publicPractices()
     {
-        return $this->hasMany(\App\Models\PublicPractice::class);
+        return $this->belongsToMany(\App\Models\PublicPractice::class);
     }
 
     public function privatePractices()
     {
-        return $this->hasMany(\App\Models\PrivatePractice::class);
+        return $this->belongsToMany(\App\Models\PrivatePractice::class);
     }
 
     public function user()
