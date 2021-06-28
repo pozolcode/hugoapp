@@ -1,0 +1,194 @@
+.container.login {
+  padding: 25px 0;
+  width: 420px;
+
+  .card {
+    border-radius: 30px;
+
+    > .card-header {
+      background-color: inherit;
+      border: none;
+      border-radius: 30px 30px 0 0;
+      padding: 0;
+
+      > .header-main {
+        background-color: $purple;
+        border-radius: inherit;
+        height: 225px;
+
+        > .header-image {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+
+          > img {
+            height: 155px;
+            margin-bottom: 15px;
+            width: 155px;
+          }
+
+          > div {
+            color: $white;
+            font-size: 18px;
+            font-weight: 300;
+          }
+        }
+      }
+
+      > .header-decoration {
+        background-color: $neon-blue;
+        height: 10px;
+      }
+    }
+
+    > .card-body {
+      border-top: none;
+
+      > .card-title {
+        color: $dark-blue;
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 0px;
+        margin: 5px 0 20px 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .form-group {
+        &:nth-child(1) { margin-bottom: 30px }
+
+        &:nth-child(3) { margin-bottom: 5px; }
+
+        &.submit-button {
+          margin: 25px 0 50px 0;
+          justify-content: center;
+
+          > div { margin: 0; }
+        }
+
+        &.alternative-login {
+          margin-bottom: 60px;
+
+          > div {
+            flex-direction: column;
+            text-align: center;
+  
+            .alternative-login-message {
+              font-size: 10px;
+              margin-bottom: 20px;
+            }
+  
+            .alternative-login-buttons {
+              display: flex;
+              justify-content: center;
+  
+              > button {
+                font-size: 10px;
+                height: 30px;
+                margin: 0 10px;
+                text-transform: capitalize;
+                width: 100px;
+  
+                &.btn-facebook {
+                  background-color: $facebook-background;
+                  color: $white;
+
+                  > svg {
+                    fill: $white;
+                    margin-right: 4px;
+                  }
+                }
+  
+                &.btn-google {
+                  background-color: $white;
+                  border: 1px solid $google-border;
+                }
+              }
+            }
+          }
+        }
+
+        &.registration-row {
+          font-size: 10px;
+          justify-content: center;
+          margin-bottom: 20px;
+
+          a {
+            color: $black;
+            font-weight: 700;
+            margin-left: 4px;
+          }
+        }
+
+        > div {
+          display: flex;
+          justify-content: center;
+
+          > a {
+            color: $page-light-grey;
+            font-size: 10px;
+            padding: 0;
+
+            &:hover { text-decoration: none; }
+          }
+  
+          > input {
+            border: none;
+            border-bottom: 1px solid $light-blue;
+            border-radius: 0;
+            font-size: 11px;
+            font-weight: 300;
+            padding: 9px 0 5px 5px;
+            width: 270px;
+
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            // flex: 1 1 auto;
+            left: 0;
+
+            &:after {
+              position: absolute;
+              transition: 0.3s;
+              content: '';
+              width: 0;
+              left: 50%;
+              bottom: 0;
+              height: 3px;
+              background: #f7f7f7;
+            }
+  
+            &::placeholder {
+              color: $page-font-alt;
+              transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+              border-color: $purple;
+
+              &::placeholder { color: $page-light-grey; }
+
+              &:hover {
+                width: 270px;
+                left: 0;
+              }
+            }
+          }
+        }
+
+        button {
+          background-color: $neon-green;
+          border: none;
+          border-radius: 20px;
+          font-size: 11px;
+          font-weight: 800;
+          height: 38px;
+          text-transform: uppercase;
+          width: 148px;
+        }
+      }
+    }
+  }
+}
