@@ -10002,24 +10002,131 @@ h3 {
     border-color: #dee2e6;
   }
 }
+div.container.dashboard {
+  margin: 0;
+  max-width: 100% !important;
+}
+
+div.container.dashboard .side-nav {
+  background-color: #5E60CE;
+  border-radius: 0 60px 60px 0;
+  color: #FFFFFF;
+  height: 100%;
+  transition: 0.3s;
+  padding: 70px 0 0 45px;
+  position: fixed;
+  width: 155px;
+  z-index: 1;
+}
+div.container.dashboard .side-nav:hover {
+  width: 355px;
+}
+
+div.container.dashboard .side-nav:hover > .nav-actions {
+  width: 355px;
+}
+
+div.container.dashboard .side-nav:hover > .nav-actions div > a:hover {
+  text-decoration: none;
+}
+
+div.container.dashboard .side-nav:hover > .nav-actions div > a .hidden {
+  opacity: 1;
+  display: inline-block;
+}
+
+div.container.dashboard .side-nav > .nav-logo {
+  margin-bottom: 100px;
+  width: 115px;
+}
+
+div.container.dashboard .side-nav > .nav-logo > a {
+  height: 70px;
+  width: 70;
+}
+
+div.container.dashboard .side-nav > .nav-logo > a > img {
+  height: inherit;
+  width: inherit;
+}
+
+div.container.dashboard .side-nav > .nav-actions {
+  margin-right: 45px;
+  width: 115px;
+}
+
+div.container.dashboard .side-nav > .nav-actions > div {
+  align-items: center;
+  margin-bottom: 30px;
+  display: flex;
+}
+div.container.dashboard .side-nav > .nav-actions > div:last-child {
+  margin-bottom: 0;
+}
+
+div.container.dashboard .side-nav > .nav-actions > div > a {
+  color: white;
+  font-size: 18px;
+}
+
+div.container.dashboard .side-nav > .nav-actions > div > a .icon {
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 32px;
+  width: 32px;
+}
+
+div.container.dashboard .side-nav > .nav-actions > div > a .icon i {
+  margin: auto;
+}
+
+div.container.dashboard .side-nav > .nav-actions > div > a .hidden {
+  display: hidden;
+  transition: 0.5s ease-in-out all;
+  opacity: 0;
+}
+
+div.container.dashboard .content {
+  height: 100%;
+  padding: 70px 0 70px 200px;
+  position: absolute;
+  width: 100%;
+}
+
+div.container.dashboard .content > .container {
+  height: 100%;
+}
+
+div.container.dashboard .content > .container > .row:nth-child(1) {
+  height: 20%;
+}
+div.container.dashboard .content > .container > .row:nth-child(2) {
+  height: 80%;
+}
+
 .container.login {
   padding: 25px 0;
   width: 420px;
 }
+
 .container.login .card {
   border-radius: 30px;
 }
+
 .container.login .card > .card-header {
   background-color: inherit;
   border: none;
   border-radius: 30px 30px 0 0;
   padding: 0;
 }
+
 .container.login .card > .card-header > .header-main {
   background-color: #5E60CE;
   border-radius: inherit;
   height: 225px;
 }
+
 .container.login .card > .card-header > .header-main > .header-image {
   align-items: center;
   display: flex;
@@ -10027,23 +10134,28 @@ h3 {
   justify-content: center;
   height: 100%;
 }
+
 .container.login .card > .card-header > .header-main > .header-image > img {
   height: 155px;
   margin-bottom: 15px;
   width: 155px;
 }
+
 .container.login .card > .card-header > .header-main > .header-image > div {
-  color: #FFFFFF;
+  color: white;
   font-size: 18px;
   font-weight: 300;
 }
+
 .container.login .card > .card-header > .header-decoration {
   background-color: #64DFDF;
   height: 10px;
 }
+
 .container.login .card > .card-body {
   border-top: none;
 }
+
 .container.login .card > .card-body > .card-title {
   color: #4F5D75;
   font-size: 24px;
@@ -10053,34 +10165,42 @@ h3 {
   text-align: center;
   text-transform: uppercase;
 }
+
 .container.login .card > .card-body .form-group:nth-child(1) {
   margin-bottom: 30px;
 }
 .container.login .card > .card-body .form-group:nth-child(3) {
   margin-bottom: 5px;
 }
+
 .container.login .card > .card-body .form-group.submit-button {
-  margin: 25px 0 50px 0;
+  margin: 20px 0 30px 0;
   justify-content: center;
 }
+
 .container.login .card > .card-body .form-group.submit-button > div {
   margin: 0;
 }
+
 .container.login .card > .card-body .form-group.alternative-login {
   margin-bottom: 60px;
 }
+
 .container.login .card > .card-body .form-group.alternative-login > div {
   flex-direction: column;
   text-align: center;
 }
+
 .container.login .card > .card-body .form-group.alternative-login > div .alternative-login-message {
   font-size: 10px;
   margin-bottom: 20px;
 }
+
 .container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons {
   display: flex;
   justify-content: center;
 }
+
 .container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons > button {
   font-size: 10px;
   height: 30px;
@@ -10088,32 +10208,39 @@ h3 {
   text-transform: capitalize;
   width: 100px;
 }
+
 .container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons > button.btn-facebook {
   background-color: #3B5998;
   color: #FFFFFF;
 }
+
 .container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons > button.btn-facebook > svg {
   fill: #FFFFFF;
   margin-right: 4px;
 }
+
 .container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons > button.btn-google {
   background-color: #FFFFFF;
   border: 1px solid #D9DEE2;
 }
+
 .container.login .card > .card-body .form-group.registration-row {
   font-size: 10px;
   justify-content: center;
   margin-bottom: 20px;
 }
+
 .container.login .card > .card-body .form-group.registration-row a {
-  color: #000000;
+  color: black;
   font-weight: 700;
   margin-left: 4px;
 }
+
 .container.login .card > .card-body .form-group > div {
   display: flex;
   justify-content: center;
 }
+
 .container.login .card > .card-body .form-group > div > a {
   color: #ADB5BD;
   font-size: 10px;
@@ -10122,18 +10249,19 @@ h3 {
 .container.login .card > .card-body .form-group > div > a:hover {
   text-decoration: none;
 }
+
 .container.login .card > .card-body .form-group > div > input {
   border: none;
   border-bottom: 1px solid #F5FAFE;
   border-radius: 0;
   font-size: 11px;
   font-weight: 300;
-  padding: 9px 0 5px 5px;
-  width: 270px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s;
   left: 0;
+  overflow: hidden;
+  padding: 9px 0 5px 5px;
+  position: relative;
+  transition: 0.3s;
+  width: 270px;
 }
 .container.login .card > .card-body .form-group > div > input:after {
   position: absolute;
@@ -10171,11 +10299,211 @@ h3 {
 .container.login .card > .card-body .form-group > div > input:hover::placeholder {
   color: #ADB5BD;
 }
-.container.login .card > .card-body .form-group > div > input:hover:hover {
-  width: 270px;
-  left: 0;
-}
+
 .container.login .card > .card-body .form-group button {
+  background-color: #0CD6A0;
+  border: none;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  height: 38px;
+  text-transform: uppercase;
+  width: 148px;
+}
+
+.container.register {
+  padding: 25px 0;
+  width: 420px;
+}
+
+.container.register .card {
+  border-radius: 30px;
+}
+
+.container.register .card > .card-header {
+  background-color: inherit;
+  border: none;
+  border-radius: 30px 30px 0 0;
+  padding: 0;
+}
+
+.container.register .card > .card-header > .header-main {
+  background-color: #5E60CE;
+  border-radius: inherit;
+  height: 225px;
+}
+
+.container.register .card > .card-header > .header-main > .header-image {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.container.register .card > .card-header > .header-main > .header-image > img {
+  height: 155px;
+  margin-bottom: 15px;
+  width: 155px;
+}
+
+.container.register .card > .card-header > .header-main > .header-image > div {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.container.register .card > .card-header > .header-decoration {
+  background-color: #64DFDF;
+  height: 10px;
+}
+
+.container.register .card > .card-body {
+  border-top: none;
+}
+
+.container.register .card > .card-body > .card-title {
+  color: #4F5D75;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0px;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container.register .card > .card-body .form-group:nth-child(1) {
+  margin-bottom: 30px;
+}
+
+.container.register .card > .card-body .form-group.submit-button {
+  margin: 20px 0 30px 0;
+  justify-content: center;
+}
+
+.container.register .card > .card-body .form-group.submit-button > div {
+  margin: 0;
+}
+
+.container.register .card > .card-body .form-group.alternative-register {
+  margin-bottom: 60px;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div {
+  flex-direction: column;
+  text-align: center;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-message {
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons > button {
+  font-size: 10px;
+  height: 30px;
+  margin: 0 10px;
+  text-transform: capitalize;
+  width: 100px;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons > button.btn-facebook {
+  background-color: #3B5998;
+  color: #FFFFFF;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons > button.btn-facebook > svg {
+  fill: #FFFFFF;
+  margin-right: 4px;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons > button.btn-google {
+  background-color: #FFFFFF;
+  border: 1px solid #D9DEE2;
+}
+
+.container.register .card > .card-body .form-group.registration-row {
+  font-size: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.container.register .card > .card-body .form-group.registration-row a {
+  color: black;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.container.register .card > .card-body .form-group > div {
+  display: flex;
+  justify-content: center;
+}
+
+.container.register .card > .card-body .form-group > div > a {
+  color: #ADB5BD;
+  font-size: 10px;
+  padding: 0;
+}
+.container.register .card > .card-body .form-group > div > a:hover {
+  text-decoration: none;
+}
+
+.container.register .card > .card-body .form-group > div > input {
+  border: none;
+  border-bottom: 1px solid #F5FAFE;
+  border-radius: 0;
+  font-size: 11px;
+  font-weight: 300;
+  left: 0;
+  overflow: hidden;
+  padding: 9px 0 5px 5px;
+  position: relative;
+  transition: 0.3s;
+  width: 270px;
+}
+.container.register .card > .card-body .form-group > div > input:after {
+  position: absolute;
+  transition: 0.3s;
+  content: "";
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: #f7f7f7;
+}
+.container.register .card > .card-body .form-group > div > input::-moz-placeholder {
+  color: #6C757D;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.container.register .card > .card-body .form-group > div > input:-ms-input-placeholder {
+  color: #6C757D;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.container.register .card > .card-body .form-group > div > input::placeholder {
+  color: #6C757D;
+  transition: all 0.3s ease-in-out;
+}
+.container.register .card > .card-body .form-group > div > input:hover {
+  border-color: #5E60CE;
+}
+.container.register .card > .card-body .form-group > div > input:hover::-moz-placeholder {
+  color: #ADB5BD;
+}
+.container.register .card > .card-body .form-group > div > input:hover:-ms-input-placeholder {
+  color: #ADB5BD;
+}
+.container.register .card > .card-body .form-group > div > input:hover::placeholder {
+  color: #ADB5BD;
+}
+
+.container.register .card > .card-body .form-group button {
   background-color: #0CD6A0;
   border: none;
   border-radius: 20px;

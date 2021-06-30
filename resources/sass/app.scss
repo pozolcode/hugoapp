@@ -7,5 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Shared
+@import './inc/sidebar_content.scss';
+
 // Auth Views
 @import './auth/login';
+@import './auth/register.scss';
