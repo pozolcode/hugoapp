@@ -81,7 +81,7 @@
                             <div class="col-md-12">
                                 <input
                                     class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}"
-                                    type="password_confirmation"
+                                    type="password"
                                     name="password_confirmation"
                                     id="password_confirmation"
                                     placeholder="Confirmar contraseña"
