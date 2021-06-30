@@ -1,0 +1,175 @@
+.container.register {
+  padding: 25px 0;
+  width: 420px;
+}
+
+.container.register .card { border-radius: 30px; }
+
+.container.register .card > .card-header {
+  background-color: inherit;
+  border: none;
+  border-radius: 30px 30px 0 0;
+  padding: 0;
+}
+
+.container.register .card > .card-header > .header-main {
+  background-color: $purple;
+  border-radius: inherit;
+  height: 225px;
+}
+
+.container.register .card > .card-header > .header-main > .header-image {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.container.register .card > .card-header > .header-main > .header-image > img {
+  height: 155px;
+  margin-bottom: 15px;
+  width: 155px;
+}
+
+.container.register .card > .card-header > .header-main > .header-image  > div {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.container.register .card > .card-header > .header-decoration {
+  background-color: $neon-blue;
+  height: 10px;
+}
+
+.container.register .card > .card-body { border-top: none; }
+
+.container.register .card > .card-body > .card-title {
+  color: $dark-blue;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0px;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container.register .card > .card-body .form-group:nth-child(1) { margin-bottom: 30px }
+
+.container.register .card > .card-body .form-group.submit-button {
+  margin: 20px 0 30px 0;
+  justify-content: center;
+}
+
+.container.register .card > .card-body .form-group.submit-button > div { margin: 0; }
+
+.container.register .card > .card-body .form-group.alternative-register { margin-bottom: 60px; }
+
+.container.register .card > .card-body .form-group.alternative-register > div {
+  flex-direction: column;
+  text-align: center;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-message {
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons > button {
+  font-size: 10px;
+  height: 30px;
+  margin: 0 10px;
+  text-transform: capitalize;
+  width: 100px;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons > button.btn-facebook {
+  background-color: $facebook-background;
+  color: $white;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons > button.btn-facebook > svg {
+  fill: $white;
+  margin-right: 4px;
+}
+
+.container.register .card > .card-body .form-group.alternative-register > div .alternative-register-buttons > button.btn-google {
+  background-color: $white;
+  border: 1px solid $google-border;
+}
+
+.container.register .card > .card-body .form-group.registration-row {
+  font-size: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.container.register .card > .card-body .form-group.registration-row a {
+  color: black;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.container.register .card > .card-body .form-group > div {
+  display: flex;
+  justify-content: center;
+}
+
+.container.register .card > .card-body .form-group > div > a {
+  color: $page-light-grey;
+  font-size: 10px;
+  padding: 0;
+
+  &:hover { text-decoration: none; }
+}
+
+.container.register .card > .card-body .form-group > div > input {
+  border: none;
+  border-bottom: 1px solid $light-blue;
+  border-radius: 0;
+  font-size: 11px;
+  font-weight: 300;
+  left: 0;
+  overflow: hidden;
+  padding: 9px 0 5px 5px;
+  position: relative;
+  transition: 0.3s;
+  width: 270px;
+
+  &:after {
+    position: absolute;
+    transition: 0.3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+  }
+
+  &::placeholder {
+    color: $page-font-alt;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover { border-color: $purple; }
+
+  &:hover::placeholder { color: $page-light-grey; }
+}
+
+.container.register .card > .card-body .form-group button {
+  background-color: $neon-green;
+  border: none;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  height: 38px;
+  text-transform: uppercase;
+  width: 148px;
+}
