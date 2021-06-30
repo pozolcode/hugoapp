@@ -1,194 +1,179 @@
 .container.login {
   padding: 25px 0;
   width: 420px;
+}
 
-  .card {
-    border-radius: 30px;
+.container.login .card { border-radius: 30px; }
 
-    > .card-header {
-      background-color: inherit;
-      border: none;
-      border-radius: 30px 30px 0 0;
-      padding: 0;
+.container.login .card > .card-header {
+  background-color: inherit;
+  border: none;
+  border-radius: 30px 30px 0 0;
+  padding: 0;
+}
 
-      > .header-main {
-        background-color: $purple;
-        border-radius: inherit;
-        height: 225px;
+.container.login .card > .card-header > .header-main {
+  background-color: $purple;
+  border-radius: inherit;
+  height: 225px;
+}
 
-        > .header-image {
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          height: 100%;
+.container.login .card > .card-header > .header-main > .header-image {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
 
-          > img {
-            height: 155px;
-            margin-bottom: 15px;
-            width: 155px;
-          }
+.container.login .card > .card-header > .header-main > .header-image > img {
+  height: 155px;
+  margin-bottom: 15px;
+  width: 155px;
+}
 
-          > div {
-            color: $white;
-            font-size: 18px;
-            font-weight: 300;
-          }
-        }
-      }
+.container.login .card > .card-header > .header-main > .header-image  > div {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+}
 
-      > .header-decoration {
-        background-color: $neon-blue;
-        height: 10px;
-      }
-    }
+.container.login .card > .card-header > .header-decoration {
+  background-color: $neon-blue;
+  height: 10px;
+}
 
-    > .card-body {
-      border-top: none;
+.container.login .card > .card-body { border-top: none; }
 
-      > .card-title {
-        color: $dark-blue;
-        font-size: 24px;
-        font-weight: 900;
-        letter-spacing: 0px;
-        margin: 5px 0 20px 0;
-        text-align: center;
-        text-transform: uppercase;
-      }
+.container.login .card > .card-body > .card-title {
+  color: $dark-blue;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0px;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
 
-      .form-group {
-        &:nth-child(1) { margin-bottom: 30px }
+.container.login .card > .card-body .form-group {
+  &:nth-child(1) { margin-bottom: 30px }
 
-        &:nth-child(3) { margin-bottom: 5px; }
+  &:nth-child(3) { margin-bottom: 5px; }
+}
 
-        &.submit-button {
-          margin: 25px 0 50px 0;
-          justify-content: center;
+.container.login .card > .card-body .form-group.submit-button {
+  margin: 20px 0 30px 0;
+  justify-content: center;
+}
 
-          > div { margin: 0; }
-        }
+.container.login .card > .card-body .form-group.submit-button > div { margin: 0; }
 
-        &.alternative-login {
-          margin-bottom: 60px;
+.container.login .card > .card-body .form-group.alternative-login { margin-bottom: 60px; }
 
-          > div {
-            flex-direction: column;
-            text-align: center;
-  
-            .alternative-login-message {
-              font-size: 10px;
-              margin-bottom: 20px;
-            }
-  
-            .alternative-login-buttons {
-              display: flex;
-              justify-content: center;
-  
-              > button {
-                font-size: 10px;
-                height: 30px;
-                margin: 0 10px;
-                text-transform: capitalize;
-                width: 100px;
-  
-                &.btn-facebook {
-                  background-color: $facebook-background;
-                  color: $white;
+.container.login .card > .card-body .form-group.alternative-login > div {
+  flex-direction: column;
+  text-align: center;
+}
 
-                  > svg {
-                    fill: $white;
-                    margin-right: 4px;
-                  }
-                }
-  
-                &.btn-google {
-                  background-color: $white;
-                  border: 1px solid $google-border;
-                }
-              }
-            }
-          }
-        }
+.container.login .card > .card-body .form-group.alternative-login > div .alternative-login-message {
+  font-size: 10px;
+  margin-bottom: 20px;
+}
 
-        &.registration-row {
-          font-size: 10px;
-          justify-content: center;
-          margin-bottom: 20px;
+.container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons {
+  display: flex;
+  justify-content: center;
+}
 
-          a {
-            color: $black;
-            font-weight: 700;
-            margin-left: 4px;
-          }
-        }
+.container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons > button {
+  font-size: 10px;
+  height: 30px;
+  margin: 0 10px;
+  text-transform: capitalize;
+  width: 100px;
+}
 
-        > div {
-          display: flex;
-          justify-content: center;
+.container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons > button.btn-facebook {
+  background-color: $facebook-background;
+  color: $white;
+}
 
-          > a {
-            color: $page-light-grey;
-            font-size: 10px;
-            padding: 0;
+.container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons > button.btn-facebook > svg {
+  fill: $white;
+  margin-right: 4px;
+}
 
-            &:hover { text-decoration: none; }
-          }
-  
-          > input {
-            border: none;
-            border-bottom: 1px solid $light-blue;
-            border-radius: 0;
-            font-size: 11px;
-            font-weight: 300;
-            padding: 9px 0 5px 5px;
-            width: 270px;
+.container.login .card > .card-body .form-group.alternative-login > div .alternative-login-buttons > button.btn-google {
+  background-color: $white;
+  border: 1px solid $google-border;
+}
 
-            position: relative;
-            overflow: hidden;
-            transition: 0.3s;
-            // flex: 1 1 auto;
-            left: 0;
+.container.login .card > .card-body .form-group.registration-row {
+  font-size: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-            &:after {
-              position: absolute;
-              transition: 0.3s;
-              content: '';
-              width: 0;
-              left: 50%;
-              bottom: 0;
-              height: 3px;
-              background: #f7f7f7;
-            }
-  
-            &::placeholder {
-              color: $page-font-alt;
-              transition: all 0.3s ease-in-out;
-            }
+.container.login .card > .card-body .form-group.registration-row a {
+  color: black;
+  font-weight: 700;
+  margin-left: 4px;
+}
 
-            &:hover {
-              border-color: $purple;
+.container.login .card > .card-body .form-group > div {
+  display: flex;
+  justify-content: center;
+}
 
-              &::placeholder { color: $page-light-grey; }
+.container.login .card > .card-body .form-group > div > a {
+  color: $page-light-grey;
+  font-size: 10px;
+  padding: 0;
 
-              &:hover {
-                width: 270px;
-                left: 0;
-              }
-            }
-          }
-        }
+  &:hover { text-decoration: none; }
+}
 
-        button {
-          background-color: $neon-green;
-          border: none;
-          border-radius: 20px;
-          font-size: 11px;
-          font-weight: 800;
-          height: 38px;
-          text-transform: uppercase;
-          width: 148px;
-        }
-      }
-    }
+.container.login .card > .card-body .form-group > div > input {
+  border: none;
+  border-bottom: 1px solid $light-blue;
+  border-radius: 0;
+  font-size: 11px;
+  font-weight: 300;
+  left: 0;
+  overflow: hidden;
+  padding: 9px 0 5px 5px;
+  position: relative;
+  transition: 0.3s;
+  width: 270px;
+
+  &:after {
+    position: absolute;
+    transition: 0.3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
   }
+
+  &::placeholder {
+    color: $page-font-alt;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover { border-color: $purple; }
+
+  &:hover::placeholder { color: $page-light-grey; }
+}
+
+.container.login .card > .card-body .form-group button {
+  background-color: $neon-green;
+  border: none;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  height: 38px;
+  text-transform: uppercase;
+  width: 148px;
 }
