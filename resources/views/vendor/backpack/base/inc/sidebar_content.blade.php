@@ -1,9 +1,36 @@
-<!-- This file is used to store sidebar items, starting with Backpack\Base 0.9.0 -->
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('dashboard') }}"><i class="la la-home nav-icon"></i> {{ trans('backpack::base.dashboard') }}</a></li>
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('doctor') }}'><i class='nav-icon la la-question'></i> Doctors</a></li>
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('project') }}'><i class='nav-icon la la-question'></i> Projects</a></li>
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('userapp') }}'><i class='nav-icon la la-question'></i> UserApps</a></li>
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('privatepractice') }}'><i class='nav-icon la la-question'></i> PrivatePractices</a></li>
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('publicpractice') }}'><i class='nav-icon la la-question'></i> PublicPractices</a></li>
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('projectstatus') }}'><i class='nav-icon la la-question'></i> ProjectStatuses</a></li>
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('questionnaire') }}'><i class='nav-icon la la-question'></i> Questionnaires</a></li>
+<div class="container dashboard">
+    <div class="row">
+        <div class="side-nav">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+                </a>
+            </div>
+
+            <div class="nav-actions">
+                <div>
+                <a href="#"><span class="icon"><i class="fa fa-plus" aria-hidden="true"></i></span>
+
+                   <span class="hidden">Crear projecto</span>
+                </a>
+                </div>
+                
+                <div>
+                    <a href="/"> <span class="icon"><i class="fa fa-list" aria-hidden="true"></i></span>
+
+                   <span class="hidden">Proyectos en curso</span>
+                </a>
+                </div>
+
+                <div>
+                <a href="/users"><span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+
+                    <span class="hidden">Base de datos</span>
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">@yield('content')</div>
+    </div>
+</div>
