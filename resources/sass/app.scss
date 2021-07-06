@@ -1,6 +1,9 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+// Icons
+@import "~font-awesome/scss/font-awesome.scss";
+
 // Variables
 @import 'variables';
 
@@ -13,3 +16,12 @@
 // Auth Views
 @import './auth/login';
 @import './auth/register.scss';
+
+html { height: 100%; }
+
+html > body { height: 100% }
+
+html > body main {
+  height: 100%;
+  padding: 15px 0 0 155px;
+}
