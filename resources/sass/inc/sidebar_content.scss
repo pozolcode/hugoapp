@@ -31,14 +31,9 @@ div.container.dashboard .side-nav > .nav-logo {
   width: 115px;
 }
 
-div.container.dashboard .side-nav > .nav-logo > a {
+div.container.dashboard .side-nav > .nav-logo > img {
   height: 70px;
-  width: 70;
-}
-
-div.container.dashboard .side-nav > .nav-logo > a > img {
-  height: inherit;
-  width: inherit;
+  width: 70px;
 }
 
 div.container.dashboard .side-nav > .nav-actions {
@@ -55,7 +50,9 @@ div.container.dashboard .side-nav > .nav-actions > div {
 }
 
 div.container.dashboard .side-nav > .nav-actions > div > a {
+  align-items: center;
   color: white;
+  display: flex;
   font-size: 18px;
 }
 
@@ -70,9 +67,10 @@ div.container.dashboard .side-nav > .nav-actions > div > a .icon {
 div.container.dashboard .side-nav > .nav-actions > div > a .icon i { margin: auto; }
 
 div.container.dashboard .side-nav > .nav-actions > div > a .hidden {
-  display:hidden;
-  transition: .5s ease-in-out all;
+  display: none;
+  margin-left: 15px;
   opacity: 0;
+  transition: .5s ease-in-out all;
 }
 
 div.container.dashboard .content {
@@ -80,12 +78,4 @@ div.container.dashboard .content {
   padding: 70px 0 70px 200px;
   position: absolute;
   width: 100%;
-}
-
-div.container.dashboard .content > .container { height: 100%; }
-
-div.container.dashboard .content > .container > .row {
-  &:nth-child(1) { height: 20%; }
-
-  &:nth-child(2) { height: 80%; }
 }
