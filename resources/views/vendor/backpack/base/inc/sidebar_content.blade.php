@@ -12,7 +12,7 @@
                    <span class="hidden">Crear projecto</span>
                 </a>
                 </div>
-                
+
                 <div>
                     <a href="/admin/project"> <span class="icon"><i class="fa fa-list" aria-hidden="true"></i></span>
 
@@ -21,7 +21,7 @@
                 </div>
 
                 <div>
-                    <a href="/admin/user"><span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                    <a href="/admin/doctors"><span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
 
                     <span class="hidden">Base de datos</span>
                 </a>
