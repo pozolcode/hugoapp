@@ -17,6 +17,13 @@
 @import './auth/login';
 @import './auth/register.scss';
 
+// CRUD Views
+// User Views
+@import './crud/doctors/index.scss';
+
+// Projects Views
+@import './crud/projects/index.scss';
+
 html { height: 100%; }
 
 html > body { height: 100% }
