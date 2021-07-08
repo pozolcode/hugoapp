@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\DoctorRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use App\Models\Doctor;
 use App\Models\UserApp;
 
 /**
@@ -32,6 +33,12 @@ class DoctorCrudController extends CrudController
         CRUD::setEntityNameStrings('doctor', 'doctors');
     }
 
+    public function index() {
+        $data = Doctor::all();
+
+        return view('backpack::crud.doctors.index', ['data' => $data]);
+    }
+
     /**
      * Define what happens when the List operation is loaded.
      * 
@@ -40,7 +47,7 @@ class DoctorCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::addColumn([  
+        CRUD::addColumn([
             // any type of relationship
             'name'         => 'user', // name of relationship method in the model
             'type'         => 'relationship',

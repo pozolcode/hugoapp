@@ -1,0 +1,64 @@
+div.container.doctor-database > .doctor-database-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+div.container.doctor-database > .doctor-database-header > .header-section > .page-title {
+  color: $dashboard-title-colour;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+div.container.doctor-database > .doctor-database-header > .header-section > .searchbar {
+  background-color: $white;
+  border: 1px solid $dashboard-search-border-colour;
+  border-radius: 8px;
+  display: flex;
+  height: 35px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  width: 590px;
+}
+
+div.container.doctor-database > .doctor-database-header > .header-section > .searchbar > input {
+  border: none;
+  width: 100%;
+}
+
+div.container.doctor-database > .doctor-database-header > .header-section > .searchbar > div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+}
+
+div.container.doctor-database > .doctor-database-header > .header-section > .searchbar > div > svg { fill: $page-light-grey; }
+
+div.container.doctor-database > .doctor-database-content > .table {
+  background-color: $white;
+  border-radius: 30px;
+  height: fit-content;
+  max-height: 850px;
+  padding: 20px 25px;
+  text-align: center;
+}
+
+div.container.doctor-database > .doctor-database-content > .table > table {
+  font-size: 10px;
+  width: 100%;
+}
+
+div.container.doctor-database > .doctor-database-content > .table > table > tbody > tr > th,
+div.container.doctor-database > .doctor-database-content > .table > table > tbody > tr > td { padding: 5px; }
+
+div.container.doctor-database > .doctor-database-content > .table > table > tbody > tr > th {
+  border-top: none;
+  font-weight: 800;
+}
+
+div.container.doctor-database > .doctor-database-content > .table > table > tbody > tr > td { font-weight: 300; }
