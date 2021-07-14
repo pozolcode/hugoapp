@@ -13,8 +13,7 @@ use App\Models\UserApp;
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class DoctorCrudController extends CrudController
-{
+class DoctorCrudController extends CrudController {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
@@ -26,8 +25,7 @@ class DoctorCrudController extends CrudController
      * 
      * @return void
      */
-    public function setup()
-    {
+    public function setup() {
         CRUD::setModel(\App\Models\Doctor::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/doctor');
         CRUD::setEntityNameStrings('doctor', 'doctors');
@@ -45,8 +43,7 @@ class DoctorCrudController extends CrudController
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
-    protected function setupListOperation()
-    {
+    protected function setupListOperation() {
         CRUD::addColumn([
             // any type of relationship
             'name'         => 'user', // name of relationship method in the model
@@ -77,8 +74,7 @@ class DoctorCrudController extends CrudController
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
-    protected function setupCreateOperation()
-    {
+    protected function setupCreateOperation() {
         CRUD::setValidation(DoctorRequest::class);
 
         $users = UserApp::where('type', '=', 'DOCTOR')->get();
@@ -141,8 +137,7 @@ class DoctorCrudController extends CrudController
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */
-    protected function setupUpdateOperation()
-    {
+    protected function setupUpdateOperation() {
         $this->setupCreateOperation();
     }
 }
