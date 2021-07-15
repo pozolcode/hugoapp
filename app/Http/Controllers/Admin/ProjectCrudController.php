@@ -39,6 +39,12 @@ class ProjectCrudController extends CrudController
         return view('backpack::crud.projects.index', ['data' => $data]);
     }
 
+    public function create() {
+        $collaborators = UserApp::where('type', '=', 'INTERVIEWER')->get();
+
+        return view('backpack::crud.projects.create', ['collaborators' => $collaborators]);
+    }
+
     /**
      * Define what happens when the List operation is loaded.
      * 
